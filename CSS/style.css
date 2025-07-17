@@ -1,0 +1,49 @@
+.priority-high {
+  background-color: #ffebee;
+}
+.priority-medium {
+  background-color: #fff3e0;
+}
+.priority-low {
+  background-color: #e8f5e8;
+}
+.priority-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+.priority-high .priority-indicator {
+  background-color: #f44336;
+}
+.priority-medium .priority-indicator {
+  background-color: #ff9800;
+}
+.priority-low .priority-indicator {
+  background-color: #4caf50;
+}
+.header-custom {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 0;
+}
+@media (max-width: 575.98px) {
+  .card-body {
+    padding: 1rem;
+  }
+  .priority-indicator {
+    width: 15px;
+    height: 15px;
+  }
+  .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .container-fluid {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

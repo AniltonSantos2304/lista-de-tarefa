@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Tarefas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <script src="../JS/script.js"></script>
+</head>
+
+<body>
+  <header class="header-custom">
+    <div class="container">
+      <h1 class="mb-0">Gerenciador de Tarefas</h1>
+    </div>
+  </header>
+
+  <div class="container-fluid px-3 px-md-4 mt-4">
+    <div class="row g-3">
+      <div class="col-12 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0">Adicionar Nova Tarefa</h5>
+          </div>
+          <div class="card-body">
+            <form id="taskForm">
+              <div class="mb-3">
+                <label for="taskName" class="form-label">Nome da Tarefa</label>
+                <input type="text" class="form-control" id="taskName" required>
+              </div>
+              <div class="mb-3">
+                <label for="taskPriority" class="form-label">Prioridade</label>
+                <select class="form-select" id="taskPriority" required>
+                  <option value="">Selecione a prioridade</option>
+                  <option value="high">Alta</option>
+                  <option value="medium">Média</option>
+                  <option value="low">Baixa</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Adicionar Tarefa</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-8">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0">Lista de Tarefas</h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Tarefa</th>
+                    <th class="d-none d-sm-table-cell">Prioridade</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody id="taskTable">
+                  <tr id="noTasksRow">
+                    <td colspan="3" class="text-center text-muted">Nenhuma tarefa adicionada</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
